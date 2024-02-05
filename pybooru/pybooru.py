@@ -53,6 +53,7 @@ class _Pybooru(object):
 
         # Set HTTP Client
         self.client = requests.Session()
+        self.client.verify = False
         headers = {'user-agent': 'Pybooru/{0}'.format(__version__),
                    'content-type': 'application/json; charset=utf-8'}
         self.client.headers = headers
